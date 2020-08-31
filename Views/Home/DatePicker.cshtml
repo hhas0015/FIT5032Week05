@@ -1,0 +1,51 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+</head>
+<body>
+    
+    <div class="container">
+        <div class="container">
+            <div class="row mt-4">
+                <p>Date Picker</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class='col-sm-6'>
+                <div class="form-group">
+                    <div class='input-group date' id='datetimepicker2'>
+                        <input type='text' class="form-control" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+
+</body>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/moment.min.js"></script>
+<script src="~/Scripts/bootstrap-datetimepicker.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#datetimepicker2').datetimepicker({
+            format: 'DD/MM/YYYY',
+            defaultDate: new Date('2020-08-20'),
+            keepOpen: true
+        });
+    })
+</script>
+</html>
